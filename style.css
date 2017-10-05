@@ -51,3 +51,30 @@ body
     color: white;
     border: 3px solid white;
 }
+
+.goodLetter
+{
+	background: #003300;
+	color: #00C000;
+	border: 3px solid #00C000;
+	cursor: default;
+}
+
+.wrongLetter
+{
+	background: #330000;
+	color: #C00000;
+	border: 3px solid #C00000;
+	cursor: default;
+}
+
+.reset
+{
+	color: green;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+.reset:hover{
+	color:white;
+}

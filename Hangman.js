@@ -42,15 +42,25 @@ function checkLetter(letterNumber) {
             letterGuessed = true;
         }
     }
+	
     if(letterGuessed) {
+		var letterId = "letter"+letterNumber;
+		document.getElementById(letterId).classList.add('goodLetter');
+		alert(letterId);
         showPassword();
     }
     else {
+		var letterId = "letter"+letterNumber;
+		document.getElementById(letterId).classList.add('wrongLetter');
+		document.getElementById(letterId).setAttribute('onclick', ';');
+		alert(letterId);
         alert("zła litera");
-        alert(++mistakes);
+		alert(++mistakes);
     }
 
-    if(password == hiddenPassword) { alert("Wygrana");}
+    if(password == hiddenPassword) {
+		document.getElementById('alphabet').innerHTML = "<span>Wygrana!</span></br>Hasło: "+password+' </br><span class="reset" onclick="location.reload()">Spróbuj odgadnąć  następne hasło</span>';
+	}
     if(mistakes > 10) {alert("Przegrana, za dużo pomyłek");}
 }
 
